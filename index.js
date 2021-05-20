@@ -2,7 +2,6 @@ const express = require('express')
 const axios = require('axios');
 require('dotenv').config();
 const cors = require('cors');
-const port = process.env.PORT
 const app = express(); 
 
 app.use(cors());
@@ -14,6 +13,8 @@ app.get('/:location', (req, res)=>{
       res.send(response.data)
     })
 })
+
+const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`)
 })
