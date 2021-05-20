@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors());
 
-app.get('/getWeather/:location', (req, res)=>{
+app.get('/:location', (req, res)=>{
   const location = req.params.location
   axios.get(`${process.env.API_URL}${location}&units=${process.env.API_UNIT}&APPID=${process.env.API_KEY}`)
     .then((response)=>{
