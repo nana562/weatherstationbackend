@@ -1,0 +1,4 @@
+# Weatherstationbackend
+
+## API ENDPOINTS
+'/:location'
