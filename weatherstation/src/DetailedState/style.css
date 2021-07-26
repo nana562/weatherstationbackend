@@ -1,0 +1,71 @@
+.detailed{
+    width: 100%;
+    /* min-height: 100vh; */
+    color: white;
+    background: #101418;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 20px;
+}
+
+
+.stat{
+    background: #1D1F24;
+    min-width: 400px;
+    width: 33%;
+    height: 250px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.title{
+    text-align: right;
+    padding: 2px;
+}
+.actual{
+    margin: 10px;
+    width: 50%;
+    height: 55%;
+    text-align: center;
+    padding: 5px;
+    border: 10px solid #232A32;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.actual-no{
+    font-weight: 900;
+    font-size: 60px;
+}
+
+.progress{
+    width: 95%;
+    background: #415261;
+    height: 10px;
+    margin: 0px auto;
+    margin-top: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.actual-progress{
+    height: 100%;
+    content: '';
+}
+
+.temperature .actual-progress{
+    color: #E54922;
+    background-color: #E54922;
+}
+.temperature .actual-no{
+    color: #E54922;
+}
+.humidity .actual-progress{
+    color: #9AB92F;
+    background-color: #9AB92F;
+}
+.humidity .actual-no{
+    color: #9AB92F;
+}

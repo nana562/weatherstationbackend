@@ -10,3 +10,9 @@ export const search_location = (payload) => {
         payload:    payload
     }
 }
+export const update_weather = (payload) => {
+    return{
+        type:       'UPDATE_WEATHER',
+        payload:    payload
+    }
+}
