@@ -1,38 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React  from 'react';
 import './stats.css';
 import Icon from './../assets/cloudy.png';
-import { useSelector } from 'react-redux';
 
-const Stats = () =>{
+const Stats = (props) =>{
     const date  = new Date();
     let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-    const location = useSelector(state => state.location)
-    const [data, setData] = useState([])
-    const [loading, setLoading] = useState('Loading...')
+    const data = props.data
 
-    useEffect(()=>{
-        fetchData();
-    },[location])
-
-    const fetchData = () =>{
-        setData([])
-        setLoading('Loading...')
-        fetch(`https://weatherstationbackend.herokuapp.com/${location}`)
-            .then(response => response.json())
-            .then(data =>{
-                console.log(data)
-                setData(data)
-            })
-            .catch(error=>{
-                setLoading('Location Not available. Try somewhere Else')
-                console.log(error)
-            })
-    }
-    if(data.length === 0){
-        return <div className="stats">{loading}</div>
-    }
     return(
         <div className="stats">
             <div className="temperature">
