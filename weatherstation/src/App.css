@@ -1,5 +1,4 @@
 .App {
-  background: url("./assets/pexels-tim-mossholder-1605148\ 1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -8,6 +7,12 @@
   height: 100vh;
 }
 
-.floating-button{
+.floating-button {
   position: absolute;
+  background: none;
+  color: white;
+  border: none;
+  padding: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
 }

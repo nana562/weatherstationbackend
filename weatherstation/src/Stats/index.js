@@ -9,6 +9,8 @@ const Stats = (props) =>{
 
     const data = props.data
 
+    const icn = 'http://openweathermap.org/img/w/'
+
     return(
         <div className="stats">
             <div className="temperature">
@@ -16,7 +18,7 @@ const Stats = (props) =>{
             </div>
             <div className="location-date">
                 <div className="location">
-                    <h2>{data.name}</h2>
+                    <h2 style={{color: 'white'}} >{data.name}</h2>
                 </div>
                 <div className="date">
                     <p>{date.getHours()}:{date.getMinutes()} - {days[date.getDay()]}, {date.getDate()} {months[date.getMonth()]} {date.getFullYear()}</p>
@@ -24,7 +26,7 @@ const Stats = (props) =>{
             </div>
             <div className="weather">
                 <div className="icon">
-                    <img src={Icon} alt="cloudy"/>
+                    <img src={`${icn}${data.weather[0].icon}.png`} alt="cloudy"/>
                 </div>
                 <p>{data.weather[0].description}</p>
             </div>

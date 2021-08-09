@@ -9,6 +9,7 @@ const DetailedState = (props) =>{
     let pressure_preogress = ( data.main.pressure -950) / (1050 - 950) * 100
     let temp_preogress = ( data.main.temp -273.15) / ( 35) * 100
    
+    const icn = 'http://openweathermap.org/img/w/'
 
     return(
         <div className="all">
@@ -86,25 +87,24 @@ const DetailedState = (props) =>{
 
             </div>
             <div className="stat dew">
-                <div className="title">Dew point</div>
+                <div className="title">Gust</div>
                 <div className="actual">
-                    <div className="actual-title">Dewpoint</div>
-                    <div className="actual-no">25.4</div>
-                    <div className="actual-unit">Celcius</div>
+                    <div className="actual-title">Gust</div>
+                    <div className="actual-no">{data.wind.gust}</div>
+                    <div className="actual-unit">km/h</div>
                 </div>
                 <div className="measure" >
-                            <p>0</p>
-                            <p>5</p>
+                <p>0</p>
                             <p>10</p>
-                            <p>15</p>
                             <p>20</p>
-                            <p>25</p>
                             <p>30</p>
-                            <p>35</p>
+                            <p>40</p>
+                            <p>50</p>
+                            <p>60+</p>
                         </div>
                 <div className="progress">
                     <div className="full">
-                        <div style={{width : '70%'}} className="actual-progress">s </div>
+                    <div style={{width : `${data.wind.gust}%`}} className="actual-progress">s </div>
                     </div>
                 </div>
 
@@ -143,8 +143,56 @@ const DetailedState = (props) =>{
                         <div className="left">W</div>
                         <div className="right">E</div>
                     </div>
-                    <div className="actual-no" style={{ position: 'relative' }} >{data.wind.deg} <sup>o</sup> </div>
+                    <div className="actual-no" style={{ position: 'relative' }} >{data.wind.deg}<span style={{fontSize: 10}} >deg</span> </div>
                     <div className="actual-unit" style={{ position: 'absolute', width: '110%', height: '110%', transform: `rotate(${data.wind.deg}deg)`}} > <p></p> V</div>
+                </div>
+
+            </div>
+            <div className="stat wind-speed">
+                <div className="title">Wind Speed</div>
+                <div className="actual">
+                    <div className="actual-title"></div>
+                    <div className="actual-no">{(data.wind.speed * 0.277778).toFixed(2)}</div>
+                    <div className="actual-unit">m/s</div>
+                </div>
+                <div className="measure" >
+                            <p>0</p>
+                            <p>10</p>
+                            <p>20</p>
+                            <p>30</p>
+                            <p>40</p>
+                            <p>50</p>
+                            <p>60+</p>
+                        </div>
+                <div className="progress">
+                    <div className="full">
+                        <div style={{width : `${data.wind.speed}%`}} className="actual-progress">s </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div className="stat temperature">
+                <div className="title">Acutal Temperature</div>
+                <div className="actual">
+                    <div className="actual-title">Feels like</div>
+                    <div className="actual-no">{(data.main.feels_like - 273.15).toFixed(2)}</div>
+                    <div className="actual-unit">Celcuis</div>
+                </div>
+                        <div className="measure" >
+                            <p>0</p>
+                            <p>5</p>
+                            <p>10</p>
+                            <p>15</p>
+                            <p>20</p>
+                            <p>25</p>
+                            <p>30</p>
+                            <p>35</p>
+                        </div>
+                <div className="progress">
+                    <div className="full">
+                        <div style={{width : `${temp_preogress}%`}} className="actual-progress">s </div>
+                    </div>
                 </div>
 
             </div>
@@ -165,6 +213,14 @@ const DetailedState = (props) =>{
                     </div>
                 </div>
 
+            </div>
+            <div className="stat humidity">
+                <div className="title">Forecast</div>
+                <div className="actual">
+                    <div className="actual-title">{data.weather[0].description}</div>
+                
+                <img src={`${icn}${data.weather[0].icon}.png`} alt="cloudy"/>
+                </div>
             </div>
         </div>
             

@@ -1,158 +1,157 @@
-.all{
-    background: #101418;
-    color: white;
-    width: auto;
-    min-height: 100vh;
+.all {
+  background: #101418;
+  color: white;
+  width: auto;
+  min-height: 100vh;
 }
-.summary{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.summary {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
-.h{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    width: 230px;
-    text-align: center;
-    
+.h {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 230px;
+  text-align: center;
 }
-.h p{
-    margin: 10px;
-    font-size: 20px;
+.h p {
+  margin: 10px;
+  font-size: 20px;
 }
-h2{
-    color: #FF9806;
-    margin-top: 0;
-}
-
-.detailed{
-    /* min-height: 100vh; */
-    max-width: 880px;
-    margin: 0 auto;
-    color: white;
-    background: #101418;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    gap: 20px;
-    justify-content: center;
+h2 {
+  color: #ff9806;
+  margin-top: 0;
 }
 
-
-.stat{
-    background: #1D1F24;
-    width: 250px;
-    height: 150px;
-    margin: 0 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    padding: 10px;
-}
-.title{
-    text-align: right;
-    font-weight: 600;
-    padding: 2px;
-    font-size: 13px;
-}
-.actual{
-    margin: 10px;
-    margin-top: -1px;
-    font-size: 12px;
-    width: 50%;
-    height: 53%;
-    text-align: center;
-    padding: 5px;
-    border: 5px solid #232A32;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.wind{
-    width: 100px;
-    margin-top: -10px;
-    height: 100px;
-    border-width: 10px;
-    border-radius: 50%;
-    justify-content: center;
-    position: relative;
+.detailed {
+  /* min-height: 100vh; */
+  max-width: 1000px;
+  margin: 0 auto;
+  color: white;
+  background: #101418;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 20px;
+  justify-content: center;
 }
 
-.up-down, .left-right{
-    position: absolute;
-    width: 140%;
-    height: 140%;
-    display: flex;
-    justify-content: space-between;
+.stat {
+  background: #1d1f24;
+  width: 250px;
+  height: 150px;
+  margin: 0 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
 }
-.up-down{
-    flex-direction: column;
-    right: -25px;
+.title {
+  text-align: right;
+  font-weight: 600;
+  padding: 2px;
+  font-size: 13px;
 }
-.left-right{
-    top: 40%;
-    margin-left: -30px ;
-    margin-right: -50px ;
+.actual {
+  margin: 10px;
+  margin-top: -1px;
+  font-size: 12px;
+  width: 50%;
+  height: 53%;
+  text-align: center;
+  padding: 5px;
+  border: 5px solid #232a32;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
-.actual-no{
-    font-weight: 700;
-    font-size: 30px;
-}
-
-.progress{
-    width: 95%;
-    background: #415261;
-    height: 4px;
-    margin: 0px auto;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.actual-progress{
-    height: 100%;
-    content: '';
-}
-
-.measure{
-    margin: 0 auto;
-    margin-bottom: 5px;
-    display: flex;
-    font-size: 8px;
-    width: 95%;
-    justify-content: space-between;
-}
-.measure p{
-    margin: 0;
+.wind {
+  width: 100px;
+  margin-top: -10px;
+  height: 100px;
+  border-width: 10px;
+  border-radius: 50%;
+  justify-content: center;
+  position: relative;
 }
 
-
-.temperature .actual-progress{
-    color: #E54922;
-    background-color: #E54922;
+.up-down,
+.left-right {
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  display: flex;
+  justify-content: space-between;
 }
-.temperature .actual-no{
-    color: #E54922;
+.up-down {
+  flex-direction: column;
+  right: -25px;
 }
-.humidity .actual-progress{
-    color: #9AB92F;
-    background-color: #9AB92F;
-}
-.humidity .actual-no{
-    color: #9AB92F;
-}
-
-.dew .actual-no{
-    color: #FF9806;
-}
-.dew .actual-progress{
-    background-color: #FF9806;
-}
-.wind-speed .actual-no, .wind-dir .actual-no{
-    color: #8AA92D;
-}
-.wind-speed .actual-progress{
-    background-color: #8AA92D;
+.left-right {
+  top: 40%;
+  margin-left: -30px;
+  margin-right: -50px;
 }
 
-.wind-dir .actual-unit{
-    color: #FF9806;
+.actual-no {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.progress {
+  width: 95%;
+  background: #415261;
+  height: 4px;
+  margin: 0px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.actual-progress {
+  height: 100%;
+  content: "";
+}
+
+.measure {
+  margin: 0 auto;
+  margin-bottom: 5px;
+  display: flex;
+  font-size: 8px;
+  width: 95%;
+  justify-content: space-between;
+}
+.measure p {
+  margin: 0;
+}
+
+.temperature .actual-progress {
+  color: #e54922;
+  background-color: #e54922;
+}
+.temperature .actual-no {
+  color: #e54922;
+}
+.humidity .actual-progress {
+  color: #9ab92f;
+  background-color: #9ab92f;
+}
+.humidity .actual-no {
+  color: #9ab92f;
+}
+
+.dew .actual-no {
+  color: #ff9806;
+}
+.dew .actual-progress {
+  background-color: #ff9806;
+}
+.wind-speed .actual-no,
+.wind-dir .actual-no {
+  color: #8aa92d;
+}
+.wind-speed .actual-progress {
+  background-color: #8aa92d;
+}
+
+.wind-dir .actual-unit {
+  color: #ff9806;
 }
