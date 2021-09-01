@@ -38,8 +38,8 @@ input::placeholder {
   .search {
     position: fixed;
     right: 0;
-    background: rgba(0, 0, 0, 0.452);
-    width: 30rem;
+    background: rgba(0, 0, 0, 1);
+    width: 20rem;
     padding-left: 2rem;
     height: 100%;
   }

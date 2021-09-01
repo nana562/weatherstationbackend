@@ -28,6 +28,7 @@ function App() {
             .catch(error=>{
                 setLoading('Location Not available. Try somewhere Else')
                 console.log(error)
+                fetchData()
             })
     }
     if(data.length === 0){
@@ -37,7 +38,8 @@ function App() {
   return (
     <div className="App">
       <button className='floating-button' onClick={()=>setSeeStats(!seeStats)} >Switch View</button>
-      {seeStats ? <DetailedState data={data} /> : <><Search/><Stats data={data} /></>}
+      {seeStats ? <div className="container"><Search/><DetailedState data={data} /></div> : <div className="container"><Search/><Stats data={data} /></div>}
+      <footer>Copyright CSD Cap Developed by Martin and Kingsford</footer>
     </div>
   );
 }
